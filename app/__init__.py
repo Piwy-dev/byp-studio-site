@@ -57,16 +57,16 @@ def create_app(test_config=None):
     def privacy_gkb_nl():
         return render_template('nl/gkb/privacy-policy.html')
     
-    @app.route("/en/gkb/terms-of-service")
+    @app.route("/en/gkb/terms-of-services")
     def terms_gkb_en():
-        return render_template('en/gkb/terms-of-service.html')
+        return render_template('en/gkb/terms-of-services.html')
     
-    @app.route("/fr/gkb/terms-of-service")
+    @app.route("/fr/gkb/terms-of-services")
     def terms_gkb_fr():
-        return render_template('fr/gkb/terms-of-service.html')
+        return render_template('fr/gkb/terms-of-services.html')
     
-    @app.route("/nl/gkb/terms-of-service")
+    @app.route("/nl/gkb/terms-of-services")
     def terms_gkb_nl():
-        return render_template('nl/gkb/terms-of-service.html')
+        return render_template('nl/gkb/terms-of-services.html')
     
     return app
