@@ -33,28 +33,40 @@ def create_app(test_config=None):
     def home_nl():
         return render_template('nl/home.html')
     
-    @app.route("/en/privacy-policy")
-    def privacy_en():
-        return render_template('en/privacy-policy.html')
+    @app.route("/en/gkb")
+    def gkb_en():
+        return render_template('en/gkb.html')
     
-    @app.route("/fr/privacy-policy")
-    def privacy_fr():
-        return render_template('fr/privacy-policy.html')
+    @app.route("/fr/gkb")
+    def gkb_fr():
+        return render_template('fr/gkb.html')
     
-    @app.route("/nl/privacy-policy")
-    def privacy_nl():
-        return render_template('nl/privacy-policy.html')
+    @app.route("/nl/gkb")
+    def gkb_nl():
+        return render_template('nl/gkb.html')
     
-    @app.route("/en/terms-of-service")
-    def terms_en():
-        return render_template('en/terms-of-service.html')
+    @app.route("/en/gkb/privacy-policy")
+    def privacy_gkb_en():
+        return render_template('en/gkb/privacy-policy.html')
     
-    @app.route("/fr/terms-of-service")
-    def terms_fr():
-        return render_template('fr/terms-of-service.html')
+    @app.route("/fr/gkb/privacy-policy")
+    def privacy_gkb_fr():
+        return render_template('fr/gkb/privacy-policy.html')
     
-    @app.route("/nl/terms-of-service")
-    def terms_nl():
-        return render_template('nl/terms-of-service.html')
+    @app.route("/nl/gkb/privacy-policy")
+    def privacy_gkb_nl():
+        return render_template('nl/gkb/privacy-policy.html')
+    
+    @app.route("/en/gkb/terms-of-service")
+    def terms_gkb_en():
+        return render_template('en/gkb/terms-of-service.html')
+    
+    @app.route("/fr/gkb/terms-of-service")
+    def terms_gkb_fr():
+        return render_template('fr/gkb/terms-of-service.html')
+    
+    @app.route("/nl/gkb/terms-of-service")
+    def terms_gkb_nl():
+        return render_template('nl/gkb/terms-of-service.html')
     
     return app
