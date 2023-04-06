@@ -31,20 +31,67 @@
             <!-- Profile photo -->
             <img src="{{ url_for('static', filename='images/gkb.png') }}" alt="Profile photo" id="gkb-profile">
             <!-- Invite button -->
-            <a href="https://discord.com/api/oauth2/authorize?client_id=803979491373219840&permissions=8&scope=bot%20applications.commands" id="gkb-invite">
+            <a href="https://discord.com/api/oauth2/authorize?client_id=803979491373219840&permissions=8&scope=bot%20applications.commands"
+                id="gkb-invite">
                 Invite the bot
             </a>
-            <p id="gkb-description">General Knowledge Bot is a bot discord about general knowledge. It offers many features and commands to test
-                your general knowledge with your server members. Each time a member uses a test command, he earns points if
+            <p id="gkb-description">General Knowledge Bot is a bot discord about general knowledge. It offers many
+                features and commands to test
+                your general knowledge with your server members. Each time a member uses a test command, he earns points
+                if
                 he answers correctly and loses points in the oposite case. These points and other options are saved in a
-                database. For more information, please refer to our <a href="gkb/terms-of-services">terms of services</a>
+                database. For more information, please refer to our <a href="gkb/terms-of-services">terms of
+                    services</a>
                 and <a href="gkb/terms-of-services">privacy policy</a>.</p>
         </div>
         <div id="gkb-infos">
-            
+            <h3>Multilingual</h3>
+            <p>This bot supports 3 languages : French, English and Dutch : <a href="gkb#gkb-config-cmds">see how to
+                    configure</a></p>
+            <h2>Commands list</h2>
+            <h3>Test commands</h3>
+            <ol>
+                <li><b>/truefalse</b> send you a message containing a proposition. Once done you can click on the
+                    apropriate button
+                    depanding if you think the proposition is true or false.</li>
+                <li><b>/flag</b> sends you a message containing a flag. Once done you can enter the name of the country
+                    that
+                    correspond to the flag by clicking on the button at the bottom of the message.
+                <li><b>/capital</b> sends you a message containing a contry name. Once done you can enter the name of
+                    the country's
+                    capital by clicking on the button at the bottom of the message.</li>
+                <li><b>/logo</b> sends you a message containing a logo. Once done you can enter the name of the company
+                    that has
+                    this logo by clicking on the button at the bottom of the message.</li>
+            </ol>
+            <h3>Irregular verbs commands</h3>
+            <ol>
+                <li><b>/verbs-list</b> send a message containing the list off all verbs in function of the following
+                    options :
+                    <ol id="irr-verbs-subcmds-list">
+                        <li><u>language</u> : the language of the verbs list (English or Dutch).
+                        <li><u>showtrad</u> : if True display the infinitive of the verb and its translation in French ;
+                            else display the infinitive, the imperfect and the past participle.</li>
+                    </ol>
+                </li>
+                <li><b>/study-infinitive</b> documentation to come ...</li>
+                <li><b>/study-imperfect</b> documentation to come ...</li>
+                <li><b>/study-participle</b> documentation to come ...</li>
+            </ol>
+            <h3>Points commands</h3>
+            <ol>
+                <li><b>/profile</b> shows the points of the sellected <b><i>user.</i></b></li>
+                <li><b>/leaderboard</b> shows the 20 first members of the server with the more points.</li>
+                <li><b>/adminxp</b> changes the points of the selected <b><i>user</i></b>. This command is only
+                    available for administrators.</li>
+            </ol>
+            <h3 id="gkb-config-cmds">Configuration commands</h3>
+            <p>/setlang change the bot's language to the selected language
+                language a supported language (French, English, Dutch)
+            </p>
         </div>
     </div>
-   
+
 
     <!-- Bottom navbar -->
     <div class="bottom">

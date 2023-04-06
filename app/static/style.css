@@ -1,3 +1,7 @@
+a {
+    color: #5ca4da;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -41,6 +45,10 @@ body {
     margin: 20px 20% 0 20%;
 }
 
+#gkb-infos {
+    margin-top: 300px;
+}
+
 #gkb-invite {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -62,6 +70,10 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
+}
+
+#irr-verbs-subcmds-list {
+    list-style-type: none;
 }
 
 #languageSwitcher {
