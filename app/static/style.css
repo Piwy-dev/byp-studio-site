@@ -27,6 +27,11 @@ body {
     font-size: 17px;
 }
 
+.content {
+    margin: 50px 0 40px 0;
+    padding: 20px 40px;
+}
+
 #languageSwitcher {
     background-color: rgb(50, 50, 50);
     color: rgb(255, 255, 255);
@@ -45,7 +50,7 @@ body {
     float: right;
 }
   
-  #languageSwitcher option {
+#languageSwitcher option {
     background-color: rgb(50, 50, 50);
     color: #fff;
     font-size: 16px;
