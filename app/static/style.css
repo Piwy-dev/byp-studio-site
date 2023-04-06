@@ -32,6 +32,38 @@ body {
     padding: 20px 40px;
 }
 
+#gkb {
+    text-align: center;
+}
+
+#gkb-description {
+    font-size: 17px;
+    margin: 20px 20% 0 20%;
+}
+
+#gkb-invite {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #5ca4da;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 20px auto;
+    display: block;
+    width: 220px;
+}
+
+#gkb-invite:hover {
+    background-color: #a1cbeb;
+}
+
+#gkb-profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
 #languageSwitcher {
     background-color: rgb(50, 50, 50);
     color: rgb(255, 255, 255);
