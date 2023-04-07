@@ -5,17 +5,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>General Knowledge Bot</title>
-    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='js/language-switcher.js') }}"></script>
 </head>
 
 <body class="main">
-    <!-- Language switcher -->
-    <select id="languageSwitcher">
-        <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
-        <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
-        <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
-    </select>
+    <div class="top">
+        <!-- Logo -->
+        <a href="/en/home">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        </a>
+        <!-- Language switcher -->
+        <select id="languageSwitcher">
+            <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
+            <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
+            <option value="nl"><span>&#x1F1F3;&#x1F1F1;</span> Nederlands</option>
+        </select>
+    </div>
+
+    <!-- Bottom navbar -->
+    <div class="bottom">
+        <p>© 2023 Byp Studio</p>
+        <a href="gkb/terms-of-services">Terms of services</a>
+        <a href="gkb/privacy-policy">Privacy policy</a>
+    </div>
 </body>
 
 </html>

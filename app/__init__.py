@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, g, current_app
+from flask import Flask, render_template, g, current_app, url_for
 
 def create_app(test_config=None):
     """
@@ -16,57 +16,47 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    default_language = 'en'
+
     # create the pages
     @app.route("/")
-    def main():
-        return render_template('main.html')
+    def index():
+        return render_template(url_for('home', language=default_language))
     
-    @app.route("/en/home")
-    def home_en():
-        return render_template('en/home.html')
-    
-    @app.route("/fr/home")
-    def home_fr():
-        return render_template('fr/home.html')
-    
-    @app.route("/nl/home")
-    def home_nl():
-        return render_template('nl/home.html')
-    
-    @app.route("/en/gkb")
-    def gkb_en():
-        return render_template('en/gkb.html')
-    
-    @app.route("/fr/gkb")
-    def gkb_fr():
-        return render_template('fr/gkb.html')
-    
-    @app.route("/nl/gkb")
-    def gkb_nl():
-        return render_template('nl/gkb.html')
-    
-    @app.route("/en/gkb/privacy-policy")
-    def privacy_gkb_en():
-        return render_template('en/gkb/privacy-policy.html')
-    
-    @app.route("/fr/gkb/privacy-policy")
-    def privacy_gkb_fr():
-        return render_template('fr/gkb/privacy-policy.html')
-    
-    @app.route("/nl/gkb/privacy-policy")
-    def privacy_gkb_nl():
-        return render_template('nl/gkb/privacy-policy.html')
-    
-    @app.route("/en/gkb/terms-of-services")
-    def terms_gkb_en():
-        return render_template('en/gkb/terms-of-services.html')
-    
-    @app.route("/fr/gkb/terms-of-services")
-    def terms_gkb_fr():
-        return render_template('fr/gkb/terms-of-services.html')
-    
-    @app.route("/nl/gkb/terms-of-services")
-    def terms_gkb_nl():
-        return render_template('nl/gkb/terms-of-services.html')
-    
+    @app.route("/<language>/home")
+    def home(language):
+        if language == 'fr':
+            return render_template('fr/home.html')
+        elif language == 'nl':
+            return render_template('nl/home.html')
+        else:
+            return render_template('en/home.html')
+        
+    @app.route("/<language>/gkb")
+    def gkb(language):
+        if language == 'fr':
+            return render_template('fr/gkb.html')
+        elif language == 'nl':
+            return render_template('nl/gkb.html')
+        else:
+            return render_template('en/gkb.html')
+        
+    @app.route("/<language>/gkb/privacy-policy")
+    def privacy_gkb(language):
+        if language == 'fr':
+            return render_template('fr/gkb/privacy-policy.html')
+        elif language == 'nl':
+            return render_template('nl/gkb/privacy-policy.html')
+        else:
+            return render_template('en/gkb/privacy-policy.html')
+        
+    @app.route("/<language>/gkb/terms-of-services")
+    def terms_gkb(language):
+        if language == 'fr':
+            return render_template('fr/gkb/terms-of-services.html')
+        elif language == 'nl':
+            return render_template('nl/gkb/terms-of-services.html')
+        else:
+            return render_template('en/gkb/terms-of-services.html')
+        
     return app
