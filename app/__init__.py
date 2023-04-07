@@ -36,33 +36,6 @@ def create_app(test_config=None):
         else:
             lang = 'en'
             return render_template('en/home.html')
-
-    @app.route("/<language>/gkb")
-    def gkb(language):
-        if language == 'fr':
-            return render_template('fr/gkb.html')
-        elif language == 'nl':
-            return render_template('nl/gkb.html')
-        else:
-            return render_template('en/gkb.html')
-        
-    @app.route("/<language>/gkb/privacy-policy")
-    def privacy_gkb(language):
-        if language == 'fr':
-            return render_template('fr/gkb/privacy-policy.html')
-        elif language == 'nl':
-            return render_template('nl/gkb/privacy-policy.html')
-        else:
-            return render_template('en/gkb/privacy-policy.html')
-        
-    @app.route("/<language>/gkb/terms-of-services")
-    def terms_gkb(language):
-        if language == 'fr':
-            return render_template('fr/gkb/terms-of-services.html')
-        elif language == 'nl':
-            return render_template('nl/gkb/terms-of-services.html')
-        else:
-            return render_template('en/gkb/terms-of-services.html')
         
     @app.route("/<language>/games")
     def games(language):
@@ -81,5 +54,32 @@ def create_app(test_config=None):
             return render_template('nl/bots.html')
         else:
             return render_template('en/bots.html')
+        
+    @app.route("/<language>/bots/gkb")
+    def gkb(language):
+        if language == 'fr':
+            return render_template('fr/bots/gkb.html')
+        elif language == 'nl':
+            return render_template('nl/bots/gkb.html')
+        else:
+            return render_template('en/bots/gkb.html')
+        
+    @app.route("/<language>/bots/gkb/privacy-policy")
+    def privacy_gkb(language):
+        if language == 'fr':
+            return render_template('fr/bots/gkb/privacy-policy.html')
+        elif language == 'nl':
+            return render_template('nl/bots/gkb/privacy-policy.html')
+        else:
+            return render_template('en/bots/gkb/privacy-policy.html')
+        
+    @app.route("/<language>/bots/gkb/terms-of-services")
+    def terms_gkb(language):
+        if language == 'fr':
+            return render_template('fr/bots/gkb/terms-of-services.html')
+        elif language == 'nl':
+            return render_template('nl/bots/gkb/terms-of-services.html')
+        else:
+            return render_template('en/bots/gkb/terms-of-services.html')
         
     return app

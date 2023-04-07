@@ -4,9 +4,20 @@ body {
     background-color: rgb(243, 243, 243);
 }
 
+body a {
+    color: #5ca4da;
+    text-decoration: none;
+}
+
 body.dark {
     background-color: rgb(43, 41, 41);
     color: #fff;
+}
+
+.bot img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
 }
 
 .bottom {
@@ -27,6 +38,7 @@ body.dark {
     margin: 0 10px;
     float: right;
     color: rgb(113, 113, 113);
+    text-decoration: underline;
 }
 
 .bottom.dark a {
@@ -48,6 +60,7 @@ body.dark {
 .content {
     margin: 50px 0 40px 0;
     padding: 20px 40px;
+    text-align: center;
 }
 
 #dark-mode-switcher {
@@ -111,10 +124,6 @@ body.dark {
     transform: translateX(34px);
 }
 
-#gkb {
-    text-align: center;
-}
-
 #gkb-description {
     font-size: 17px;
     margin: 20px 20% 0 20%;
@@ -122,6 +131,7 @@ body.dark {
 
 #gkb-infos {
     margin-top: 50px;
+    text-align: left;
 }
 
 #gkb-invite {
@@ -175,9 +185,19 @@ body.dark {
     font-size: 16px;
 }
 
+.privacy {
+    text-align: left;
+    margin: 75px 10% 75px 10%;
+}
+
 #return-button {
     text-decoration: none;
     font-size: 18px;
+}
+
+.terms {
+    text-align: left;
+    margin: 75px 10% 75px 10%;
 }
 
 .top {
