@@ -37,7 +37,6 @@ def create_app(test_config=None):
             lang = 'en'
             return render_template('en/home.html')
 
-        
     @app.route("/<language>/gkb")
     def gkb(language):
         if language == 'fr':
@@ -64,5 +63,23 @@ def create_app(test_config=None):
             return render_template('nl/gkb/terms-of-services.html')
         else:
             return render_template('en/gkb/terms-of-services.html')
+        
+    @app.route("/<language>/games")
+    def games(language):
+        if language == 'fr':
+            return render_template('fr/games.html', active='games')
+        elif language == 'nl':
+            return render_template('nl/games.html', active='games')
+        else:
+            return render_template('en/games.html', active='games')
+        
+    @app.route("/<language>/bots")
+    def bots(language):
+        if language == 'fr':
+            return render_template('fr/bots.html', active='bots')
+        elif language == 'nl':
+            return render_template('nl/bots.html', active='bots')
+        else:
+            return render_template('en/bots.html', active='bots')
         
     return app
