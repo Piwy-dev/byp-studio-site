@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, g, current_app, url_for
+from flask import Flask, render_template, g, current_app, redirect
 
 def create_app(test_config=None):
     """
@@ -21,7 +21,7 @@ def create_app(test_config=None):
     # create the pages
     @app.route("/")
     def index():
-        return render_template(url_for('home', language=default_language))
+        return redirect('/en/home')
     
     @app.route("/<language>/home")
     def home(language):
