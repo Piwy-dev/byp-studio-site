@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, g, current_app, redirect
+from flask import Flask, render_template, g, current_app, redirect, request
 
 def create_app(test_config=None):
     """
@@ -16,21 +16,27 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    default_language = 'en'
+    lang = 'en'
 
-    # create the pages
+   # create the pages
     @app.route("/")
     def index():
-        return redirect('/en/home')
-    
+        print(request.accept_languages)
+        return redirect('/{}/home'.format(lang))
+
     @app.route("/<language>/home")
     def home(language):
+        global lang
         if language == 'fr':
+            lang = 'fr'
             return render_template('fr/home.html')
         elif language == 'nl':
+            lang = 'nl'
             return render_template('nl/home.html')
         else:
+            lang = 'en'
             return render_template('en/home.html')
+
         
     @app.route("/<language>/gkb")
     def gkb(language):
