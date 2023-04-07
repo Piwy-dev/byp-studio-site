@@ -6,6 +6,5 @@ window.onload = function () {
     toggleButton.addEventListener('change', function () {
         body.classList.toggle('dark');
         bottom.classList.toggle('dark');
-        console.log('Dark mode toggled');
     });
 }
