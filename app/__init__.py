@@ -67,19 +67,19 @@ def create_app(test_config=None):
     @app.route("/<language>/games")
     def games(language):
         if language == 'fr':
-            return render_template('fr/games.html', active='games')
+            return render_template('fr/games.html')
         elif language == 'nl':
-            return render_template('nl/games.html', active='games')
+            return render_template('nl/games.html')
         else:
-            return render_template('en/games.html', active='games')
+            return render_template('en/games.html')
         
     @app.route("/<language>/bots")
     def bots(language):
         if language == 'fr':
-            return render_template('fr/bots.html', active='bots')
+            return render_template('fr/bots.html')
         elif language == 'nl':
-            return render_template('nl/bots.html', active='bots')
+            return render_template('nl/bots.html')
         else:
-            return render_template('en/bots.html', active='bots')
+            return render_template('en/bots.html')
         
     return app
