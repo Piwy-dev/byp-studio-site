@@ -1,15 +1,29 @@
 window.onload = function() {
-    // Dark mode switcher
+    /* Dark mode switcher */
     const toggleButton = document.getElementById('dark-mode-switcher');
     const body = document.body;
     const bottom = document.querySelector('.bottom');
+    
+    // Check if the dark mode is enabled in the localStorage object
+    const isDarkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
 
-    toggleButton.addEventListener('change', function() {
-        body.classList.toggle('dark');
-        bottom.classList.toggle('dark');
+    // Set the initial state of the dark mode
+    if (isDarkModeEnabled) {
+        body.classList.add('dark');
+        bottom.classList.add('dark');
+        toggleButton.querySelector('input').checked = true;
+    }
+
+    toggleButton.addEventListener('change', function () {
+        const isChecked = toggleButton.querySelector('input').checked;
+        body.classList.toggle('dark', isChecked);
+        bottom.classList.toggle('dark', isChecked);
+        
+        // Store the state of the dark mode in the localStorage object
+        localStorage.setItem('darkModeEnabled', isChecked);
     });
 
-    // Language switcher
+    /* Language switcher */
     const languageSwitcher = document.getElementById('languageSwitcher');
 
     languageSwitcher.addEventListener('change', function() {

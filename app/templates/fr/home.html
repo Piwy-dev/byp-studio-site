@@ -16,6 +16,13 @@
         <a href="/en/home">
             <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
         </a>
+
+        <!-- Navigation buttons -->
+        <div class="top-buttons">
+            <a href="/fr/games" class="top-button" id="games-button">Jeux</a>
+            <a href="/fr/bots" class="top-button" id="bots-button">Bots</a>
+        </div>
+
         <!-- Language switcher -->
         <select id="languageSwitcher">
             <option value="fr"><span>&#x1F1EB;&#x1F1F7;</span> Français</option>
@@ -32,6 +39,7 @@
 
     <!-- Bottom navbar -->
     <div class="bottom">
+        <p>© 2023 Byp Studio</p>
         <a href="/gkb/terms-of-services">Conditions d'utilisation</a>
         <a href="/gkb/privacy-policy">Politique de confidentialité</a>
     </div>
