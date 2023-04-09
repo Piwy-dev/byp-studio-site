@@ -21,7 +21,7 @@
             <a href="/en/games" class="top-button" id="games-button">Games</a>
             <a href="/en/bots" class="top-button" id="bots-button">Bots</a>
         </div>
-    
+
         <!-- Language switcher -->
         <select id="languageSwitcher">
             <option value="en"><span>&#x1F1EC;&#x1F1E7;</span> English</option>
@@ -34,6 +34,26 @@
             <input type="checkbox">
             <span class="slider"></span>
         </label>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <div id="byp-quiz">
+            <h1>Byp Quiz</h1>
+            <!-- Profile photo -->
+            <img src="{{ url_for('static', filename='images/byp-quiz.png') }}" alt="Profile photo" id="gkb-profile">
+            <!-- Invite button -->
+            <a href="https://discord.com/api/oauth2/authorize?client_id=803979491373219840&permissions=8&scope=bot%20applications.commands"
+                id="gkb-invite">
+                Download
+            </a>
+            <p id="gkb-description">Byp Quiz est un jeu dans lequel vous allez devoir mettre votre culture générale à
+                l’épreuve en répondant à des quiz qui porteront chacun sur un thème qui reste assez général. Tout cela
+                avec des informations supplémentaires sur certaines questions pour les curieux. Après 3 erreurs lors
+                d’un quiz vous avez perdu et vous devrez tout recommencer alors faites attention à la réponse que vous
+                donnez. Serez-vous assez cultivé et curieux pour apprendre de vos erreurs et réussir tous les thèmes de
+                l’application ?
+        </div>
     </div>
 
     <!-- Bottom navbar -->
