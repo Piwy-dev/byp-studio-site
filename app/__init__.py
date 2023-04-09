@@ -46,6 +46,15 @@ def create_app(test_config=None):
         else:
             return render_template('en/games.html')
         
+    @app.route("/<language>/games/byp-quiz")
+    def byp_quiz(language):
+        if language == 'fr':
+            return render_template('fr/games/byp-quiz.html')
+        elif language == 'nl':
+            return render_template('nl/games/byp-quiz.html')
+        else:
+            return render_template('en/games/byp-quiz.html')
+        
     @app.route("/<language>/bots")
     def bots(language):
         if language == 'fr':
